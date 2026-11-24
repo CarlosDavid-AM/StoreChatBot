@@ -1,0 +1,175 @@
+{
+  "info": {
+    "_postman_id": "2fcf4633-013d-4d66-af88-24d426f41790",
+    "name": "StoreFinal",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27080892",
+    "_collection_link": "https://go.postman.co/collection/27080892-2fcf4633-013d-4d66-af88-24d426f41790?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Verificación DB",
+      "item": [
+        {
+          "name": "productos",
+          "item": [
+            {
+              "name": "ObtenerProductos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/productos",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "productos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ObtenerProductoPorId",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/productos/3",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "productos",
+                    "3"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "especificaciones",
+          "item": [
+            {
+              "name": "ObtenerEspecificaciones",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/especificaciones",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "especificaciones"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "consultados",
+          "item": [
+            {
+              "name": "ObtenerColtultas",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/consultados",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "consultados"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ObtenerConsultasPorRanking",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/consultados/ranking",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "consultados",
+                    "ranking"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ObtenerConsultaPorProducto",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/consultas/consultados/producto/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "consultados",
+                    "producto",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ChatBot",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"mensaje\": \"¿Puedo adquirir ese producto?\",\r\n  \"thread_id\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/chat",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "chat"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
